@@ -1,11 +1,21 @@
-#include < iostream>
+#include <iostream>
 #include "Header.h"
+#include <time.h>
 
 int main() {
 
-	Map(1);
-	void Map::cambiarpunto(3, 4, '0');
-	void Map::printmapa();
+	srand(time(nullptr));
+
+	int difficulty;
+	std::cout << "Introduce la dififucltad:" << std::endl << "1-Easy" << std::endl << "2-Medium" << std::endl << "3-Hard"<<std::endl<<"La dificultad elegida es: ";
+
+	std::cin >> difficulty;
+
+	Map map(difficulty);
+	map.mapa();
+
+
+	system("pause");
 
 
 }
